@@ -12,12 +12,10 @@
     <None Include="..\lay and gray.svg" Link="%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
+  <!-- This didn't seem to work, so downloaded the file directly into the repo
+  and used a None Include instead of a copy post-build event. 🤷🏻‍♂️ -->
   <!-- <Target Name="AfterBuild">
     <Copy SourceFiles="$(NuGetPackageRoot)skiasharp.nativeassets.linux\1.68.0\runtimes\linux-x64\native\libSkiaSharp.so"
-      DestinationFiles="$(TargetDir)libSkiaSharp.so" />
-  </Target> -->
-  <!-- <Target Name="AfterBuild">
-    <Copy SourceFiles="..\libSkiaSharp.so"
       DestinationFiles="$(TargetDir)libSkiaSharp.so" />
   </Target> -->
 
