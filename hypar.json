@@ -1,0 +1,19 @@
+{
+  "$schema": "https://prod-api.hypar.io/schemas/ExporterFunction",
+  "id": "6d884bd6-5349-4978-9ed3-eb96c0de3dcd",
+  "name": "Pdf Exporter Sample",
+  "description": "The PdfExporterSample function.",
+  "language": "C#",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Download PDF": {
+        "$ref": "https://prod-api.hypar.io/schemas/FileDestination",
+        "$hyparFileExtension": "pdf"
+      }
+    }
+  },
+  "repository_url": "https://github.com/hypar-io/function",
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "1.3.0-alpha.1"
+}

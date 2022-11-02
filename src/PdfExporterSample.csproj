@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\dependencies\PdfExporterSample.Dependencies.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\lay and gray.svg" Link="%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- <Target Name="AfterBuild">
+    <Copy SourceFiles="$(NuGetPackageRoot)skiasharp.nativeassets.linux\1.68.0\runtimes\linux-x64\native\libSkiaSharp.so"
+      DestinationFiles="$(TargetDir)libSkiaSharp.so" />
+  </Target> -->
+  <!-- <Target Name="AfterBuild">
+    <Copy SourceFiles="..\libSkiaSharp.so"
+      DestinationFiles="$(TargetDir)libSkiaSharp.so" />
+  </Target> -->
+
+  <ItemGroup>
+    <None Include="..\libSkiaSharp.so" Link="%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
